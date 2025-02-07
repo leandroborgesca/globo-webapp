@@ -19,5 +19,5 @@ output "data2" {
 }
 
 output "data3" {
-  value = nonsensitive(data.tfe_outputs.networking)
+  value = data.tfe_outputs
 }
