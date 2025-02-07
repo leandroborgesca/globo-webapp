@@ -9,3 +9,11 @@ output "webapp_instance0_public_ip" {
 output "private_key_pem" {
   value = nonsensitive(module.ssh_keys.private_key_pem)
 }
+
+output "data" {
+  value = data.tfe_outputs.networking.nonsensitive_values
+}
+
+output "data2" {
+  value = data.tfe_outputs.networking.nonsensitive_values.public_subnets
+}
