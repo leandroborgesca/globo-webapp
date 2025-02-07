@@ -10,10 +10,10 @@
 #   value = nonsensitive(module.ssh_keys.private_key_pem)
 # }
 
-output "data" {
-  value = nonsensitive(data.tfe_outputs.networking.values)
+output "public_subnets" {
+  value = data.tfe_outputs.networking.nonsensitive_values.public_subnets
 }
 
-output "data2" {
-  value = data.tfe_outputs.networking.nonsensitive_values.public_subnets
+output "all_outputs" {
+  value = data.tfe_outputs.networking.nonsensitive_values
 }
