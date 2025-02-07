@@ -6,7 +6,11 @@ terraform {
     }
     tfe = {
       source  = "hashicorp/tfe"
-      version = "~>0.25"
     }
   }
+}
+
+provider "aws" {
+  region = "ca-central-1"
+
 }
