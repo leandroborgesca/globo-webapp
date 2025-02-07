@@ -15,9 +15,5 @@ output "data" {
 }
 
 output "data2" {
-  value = data.tfe_outputs.networking.nonsensitive_values
-}
-
-output "data3" {
-  value = data.tfe_outputs.networking
+  value = data.tfe_outputs.networking.nonsensitive_values.vpc_id
 }
