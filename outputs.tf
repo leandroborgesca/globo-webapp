@@ -11,9 +11,9 @@
 # }
 
 output "data" {
-  value = data.tfe_outputs.networking.nonsensitive_values
+  value = nonsensitive(data.tfe_outputs.networking.values)
 }
 
-output "data2" {
-  value = data.tfe_outputs.networking.nonsensitive_values.public_subnets
-}
+# output "data2" {
+#   value = data.tfe_outputs.networking.nonsensitive_values.public_subnets
+# }
